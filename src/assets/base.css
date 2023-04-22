@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body, html {
+  overflow-x: hidden;
+}
+
+body, html, section, div, h1, h2, h3, h4, h5, h6, p{
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+  display: block;
+  width: 100%;
+}
+
+h1, h2, h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+/*
+*** NAVBAR
+*/
+
+header#navbar {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  margin: 30px 0;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+header#navbar .logo {
+  float: left;
+}
+
+header#navbar .logo img{
+  width: 150px;
+}
+
+header#navbar .menu {
+  margin: 0;
+  padding: 0;
+  float: right;
+  list-style-type: none;
+}
+
+header#navbar .menu li {
+  display: inline-block;
+}
+
+header#navbar .menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+header#navbar .menu a:hover {
+  background-color: #ff1;
+}
+
+/*
+***   BANNER
+*/
+
+section#banner {
+  height: 400px;
+  width: 100%;
+  background: url('./imgs/banner.jpg');
+  background-position: bottom;
+  background-size: cover;
+  display: flex;
+  background-attachment: fixed;
+}
+
+section#banner #banner-text {
+  color: white;
+  margin: auto auto 50px auto;
+  text-align: center;
+}
+
+/*
+***   POSTS
+*/
+
+section#posts {
+  margin: 50px;
+}
+
+section#posts #posts-title h2 {
+  text-align: center;
+  font-weight: 200;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+section#posts .posts-grid {
+  display: grid;
+  column-gap: 40px;
+  grid-template-columns: auto auto auto;
+}
+
+section#posts .posts-grid .post-col{
+  -webkit-box-shadow: 0px 0px 18px 7px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 0px 18px 7px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 18px 7px rgba(0,0,0,0.15);
+}
+
+section#posts .posts-grid .post-col .post-description{
+  border: 1px solid #d8d6d6;
+  border-top: 0;
+  padding: 20px 30px;
+}
+
+section#posts .posts-grid .post-col h3{
+  text-align: center;
+  margin: 10px 0;
+}
+
+section#posts .posts-grid .post-col p{
+  text-align: justify;
+}
+
+section#posts .posts-grid .post-col img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+section#posts .posts-grid .post-col .post-description .excerpt {
+  border-top: 1px solid #d8d6d6;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+section#posts .posts-grid .post-col .post-description .excerpt p{
+  text-align: left;
+  font-size: 13px;
+}
+
+section#posts .btn.btn-purple {
+  background-color: #8f54a0;
+  color: white;
+  padding: 15px 35px;
+  border: none;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+section#posts .btn.btn-purple:hover {
+  background-color: #b16dc4;
+}
+
+/*
+***   Footer
+*/
+
+section#footer .logo {
+  display: flex;
+}
+
+section#footer .logo img {
+  margin: auto;
+  width: 300px;
+}
+
+section#footer .social-media {
+  width: 20%;
+  margin: auto;
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: auto auto auto;
+}
+
+section#footer .social-media div{
+  margin: 20px auto;
+}
+
+section#footer .social-media div svg{
+  height: 25px;
+  cursor: pointer;
+  fill: #8f54a0;
+}
+
+section#footer hr {
+  border: 1px solid #f2f0f3;
+}
+
+section#footer p{
+  margin: 25px 0;
+  text-align: center;
+}
