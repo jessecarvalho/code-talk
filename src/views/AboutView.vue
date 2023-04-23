@@ -1,15 +1,13 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <main>
+    <the-navbar />
+    <the-about />
+    <the-footer />
+  </main>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+<script setup>
+  import TheNavbar from '../components/TheNavbar.vue'
+  import TheAbout from '../components/TheAbout.vue'
+  import TheFooter from '../components/TheFooter.vue'
+</script>

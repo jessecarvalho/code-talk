@@ -26,3 +26,7 @@
 .d-flex {
   display: flex;
 }
+
+.mt {
+  margin-top: 20px;
+}

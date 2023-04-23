@@ -25,6 +25,11 @@ p {
   font-weight: 200;
 }
 
+li {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
 h1 {
   font-size: 50px;
 }
@@ -34,12 +39,14 @@ h1 {
 */
 
 header#navbar {
-  background-color: transparent;
+  background-color: #fff;
   position: absolute;
   width: 100%;
-  margin: 30px 0;
-  padding: 0 50px;
+  padding: 20px 50px;
   box-sizing: border-box;
+  align-items: center;
+  display: inline;
+  display: flex;
 }
 
 header#navbar .logo {
@@ -51,7 +58,7 @@ header#navbar .logo img{
 }
 
 header#navbar .menu {
-  margin: 0;
+  margin: auto 0 auto auto;
   padding: 0;
   float: right;
   list-style-type: none;
@@ -62,7 +69,7 @@ header#navbar .menu li {
 }
 
 header#navbar .menu a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   padding: 10px;
 }
@@ -103,7 +110,6 @@ section#posts #posts-title h2 {
   text-align: center;
   font-weight: 200;
   font-size: 30px;
-  margin-bottom: 50px;
 }
 
 section#posts .posts-grid {
@@ -113,45 +119,56 @@ section#posts .posts-grid {
 }
 
 section#posts .posts-grid .post-col{
+  margin: 50px 0;
+}
+
+section#posts .posts-grid .post-col, div#post-grid .related .post-col{
+  cursor: pointer;
   -webkit-box-shadow: 0px 0px 18px 7px rgba(0,0,0,0.15);
   -moz-box-shadow: 0px 0px 18px 7px rgba(0,0,0,0.15);
   box-shadow: 0px 0px 18px 7px rgba(0,0,0,0.15);
 }
 
-section#posts .posts-grid .post-col .post-description{
+section#posts .posts-grid .post-col:hover, div#post-grid .related .post-col:hover{
+  -webkit-box-shadow: 0px 0px 18px 10px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 0px 18px 10px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 18px 10px rgba(0,0,0,0.15);
+}
+
+section#posts .posts-grid .post-col .post-description, div#post-grid .related .post-col .post-description{
   border: 1px solid #d8d6d6;
   border-top: 0;
   padding: 20px 30px;
 }
 
-section#posts .posts-grid .post-col h3{
+section#posts .posts-grid .post-col h3, div#post-grid .related .post-col h3{
   text-align: center;
   margin: 10px 0;
 }
 
-section#posts .posts-grid .post-col p{
+section#posts .posts-grid .post-col p, div#post-grid .related .post-col p{
   text-align: justify;
 }
 
-section#posts .posts-grid .post-col img {
+section#posts .posts-grid .post-col img , div#post-grid .related .post-col img{
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
-section#posts .posts-grid .post-col .post-description .excerpt {
+section#posts .posts-grid .post-col .post-description .excerpt, div#post-grid .related .post-col .post-description .excerpt {
   border-top: 1px solid #d8d6d6;
   padding-top: 10px;
   margin-top: 10px;
 }
 
-section#posts .posts-grid .post-col .post-description .excerpt p{
+section#posts .posts-grid .post-col .post-description .excerpt p, div#post-grid .related .post-col .post-description .excerpt p{
   text-align: left;
   font-size: 13px;
 }
 
 section#posts .btn.btn-purple {
-  background-color: #8f54a0;
+  background-color: #aa96da;
   color: white;
   padding: 15px 35px;
   border: none;
@@ -191,7 +208,11 @@ section#footer .social-media div{
 section#footer .social-media div svg{
   height: 25px;
   cursor: pointer;
-  fill: #8f54a0;
+  fill: #aa96da;
+}
+
+section#footer .social-media div svg:hover{
+  fill: #b16dc4;
 }
 
 section#footer hr {
@@ -201,4 +222,130 @@ section#footer hr {
 section#footer p{
   margin: 25px 0;
   text-align: center;
+}
+
+/*
+*** POST PAGE
+*/
+
+div#post-grid {
+  display: grid;
+  column-gap: 40px;
+  grid-template-columns: 70% 30%;
+  padding: 50px;
+}
+
+div#post-grid div#post {
+  padding: 0px 40px;
+}
+
+div#post-grid div#post h2{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+div#post-grid div#post #excerpt svg {
+  width: 20px;
+}
+
+div#post-grid div#post #excerpt p {
+  font-weight: 600;
+}
+
+div#post-grid div#post #excerpt hr {
+  margin: 30px 0;
+}
+
+/*
+*** CONTACT PAGE
+*/
+
+section#contact {
+  text-align: center;
+  margin: 50px 0;
+}
+
+section#contact input {
+  display: block;
+  margin: 1% auto;
+  padding: 10px 10px;
+  border-radius: 7px;
+  border: 1px solid gray;
+  width: 50%;
+}
+
+section#contact button {
+  border: none;
+  background-color: #aa96da;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+section#contact button:hover {
+  background-color: #b16dc4;
+}
+
+/*
+*** ABOUT PAGE
+*/
+
+section#about {
+  margin-bottom: 30px;
+}
+
+section#about div.about-grid.right {
+  display: grid;
+  column-gap: 0px;
+  grid-template-columns: 30% 70%;
+}
+
+section#about div.about-grid.left {
+  display: grid;
+  column-gap: 0px;
+  grid-template-columns: 70% 30%;
+}
+
+section#about div.about-grid div.col.text{
+  display: flex;
+}
+
+section#about div.about-grid div.col.text div{
+  margin: auto;
+  text-align: center;
+}
+
+section#about div.about-grid .banner-about {
+  height: 768px;
+  display: block;
+}
+
+section#about div.about-grid #banner-about-1 {
+  background-image: url('./imgs/banner-about-1.png');
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center left;
+}
+
+section#about div.about-grid p {
+  padding: 0 20px;
+}
+
+section#about div.about-grid hr {
+  width: 20%;
+  margin: 20px auto;
+  border-color: #b16dc4;
+}
+
+section#about div.about-grid svg {
+  width: 30px;
+  display: block;
+  margin: auto;
+}
+
+section#about div.about-grid #banner-about-2 {
+  background-image: url('./imgs/banner-about-2.png');
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center right;
 }
