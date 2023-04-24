@@ -1,4 +1,4 @@
 <template>
-    <section id="banner">
+    <section class="baner" id="banner">
     </section>
 </template>

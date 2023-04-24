@@ -1,3 +1,8 @@
+:root {
+  --main-color : #aa96da;
+  --main-darker-color : #b16dc4;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body, html {
@@ -72,19 +77,24 @@ header#navbar .menu a {
   color: #000;
   text-decoration: none;
   padding: 10px;
+  border-radius: 2px;
 }
 
 header#navbar .menu a:hover {
-  background-color: #ff1;
+  background-color: var(--main-color);
+  color: white;
 }
 
 /*
 ***   BANNER
 */
 
-section#banner {
+.banner {
   height: 400px;
   width: 100%;
+}
+
+section#banner {
   background: url('./imgs/banner.jpg');
   background-position: bottom;
   background-size: cover;
@@ -93,7 +103,7 @@ section#banner {
 }
 
 section#banner #banner-text {
-  color: white;
+  color: #fff;
   margin: auto auto 50px auto;
   text-align: center;
 }
@@ -168,7 +178,7 @@ section#posts .posts-grid .post-col .post-description .excerpt p, div#post-grid 
 }
 
 section#posts .btn.btn-purple {
-  background-color: #aa96da;
+  background-color: var(--main-color);
   color: white;
   padding: 15px 35px;
   border: none;
@@ -177,7 +187,7 @@ section#posts .btn.btn-purple {
 }
 
 section#posts .btn.btn-purple:hover {
-  background-color: #b16dc4;
+  background-color: var(--main-darker-color);
 }
 
 /*
@@ -208,11 +218,11 @@ section#footer .social-media div{
 section#footer .social-media div svg{
   height: 25px;
   cursor: pointer;
-  fill: #aa96da;
+  fill: var(--main-color);
 }
 
 section#footer .social-media div svg:hover{
-  fill: #b16dc4;
+  fill: var(--main-darker-color);
 }
 
 section#footer hr {
@@ -260,9 +270,26 @@ div#post-grid div#post #excerpt hr {
 *** CONTACT PAGE
 */
 
+section#contact-banner {
+  background-image:
+    linear-gradient(to bottom, rgba(170, 150, 218, 0.5), rgba(170, 150, 218, 0.5)),
+    url('./imgs/banner-2.jpg');
+  background-position: bottom;
+  background-size: cover;
+  display: flex;
+  background-attachment: fixed;
+}
+
 section#contact {
   text-align: center;
   margin: 50px 0;
+}
+
+section#contact svg{
+  stroke: var(--main-color);
+  stroke-width: 15px;
+  fill: transparent;
+  width: 50px;
 }
 
 section#contact input {
@@ -276,14 +303,14 @@ section#contact input {
 
 section#contact button {
   border: none;
-  background-color: #aa96da;
+  background-color: var(--main-color);
   color: white;
   padding: 10px 30px;
   border-radius: 10px;
   cursor: pointer;
 }
 section#contact button:hover {
-  background-color: #b16dc4;
+  background-color: var(--main-darker-color);
 }
 
 /*
@@ -334,7 +361,7 @@ section#about div.about-grid p {
 section#about div.about-grid hr {
   width: 20%;
   margin: 20px auto;
-  border-color: #b16dc4;
+  border-color: var(--main-darker-color);
 }
 
 section#about div.about-grid svg {
