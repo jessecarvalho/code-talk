@@ -1,4 +1,4 @@
-<img height="150" src="/home/jessecarvalho/Documents/Blog/server/public/img/logo.png"/>
+<img height="150" src="https://github.com/jessecarvalho/code-talk/blob/main/client/src/assets/imgs/logo.png"/>
 
 # CodeTalk
 
@@ -119,7 +119,7 @@ If you encounter any issues or have questions about CodeTalk, please [create a n
 
 ## License
 
-CodeTalk is open-source software licensed under the [MIT License](LICENSE.md). Feel free to use, modify, and distribute it as per the terms of the license.
+CodeTalk is open-source software licensed under the MIT License. Feel free to use, modify, and distribute it as per the terms of the license.
 
 ---
 
