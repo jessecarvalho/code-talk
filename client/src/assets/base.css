@@ -9,6 +9,11 @@ body, html {
   overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 body, html, section, div, h1, h2, h3, h4, h5, h6, p{
   padding: 0;
   box-sizing: border-box;
@@ -44,13 +49,12 @@ h1 {
 */
 
 header#navbar {
-  background-color: #fff;
+  background-color: transparent;
   position: absolute;
   width: 100%;
   padding: 20px 50px;
   box-sizing: border-box;
   align-items: center;
-  display: inline;
   display: flex;
 }
 
@@ -59,7 +63,7 @@ header#navbar .logo {
 }
 
 header#navbar .logo img{
-  width: 150px;
+  width: 75px;
 }
 
 header#navbar .menu {
@@ -74,7 +78,7 @@ header#navbar .menu li {
 }
 
 header#navbar .menu a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
   padding: 10px;
   border-radius: 2px;
@@ -90,12 +94,12 @@ header#navbar .menu a:hover {
 */
 
 .banner {
-  height: 400px;
+  height: 100vh;
   width: 100%;
 }
 
 section#banner {
-  background: url('./imgs/banner.jpg');
+  background: url('./imgs/banner.gif');
   background-position: bottom;
   background-size: cover;
   display: flex;
@@ -104,8 +108,12 @@ section#banner {
 
 section#banner #banner-text {
   color: #fff;
-  margin: auto auto 50px auto;
+  margin: auto auto auto auto;
   text-align: center;
+}
+
+section#banner #banner-text h1 {
+  font-size: 100px;
 }
 
 /*
@@ -200,7 +208,7 @@ section#footer .logo {
 
 section#footer .logo img {
   margin: auto;
-  width: 300px;
+  width: 100px;
 }
 
 section#footer .social-media {
