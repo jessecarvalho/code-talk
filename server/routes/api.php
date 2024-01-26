@@ -11,11 +11,11 @@ Route::get("/posts", function () {
     return response()->json(App\Models\Post::all());
 });
 
-Route::get('/posts/:quantity', function ($quantity = null) {
+Route::get('/posts/{quantity}', function ($quantity = null) {
     return response()->json(App\Models\Post::take($quantity)->get());
 });
 
-Route::get('/post/:id', function ($id = null) {
+Route::get('/post/{id}', function ($id = null) {
     return response()->json(App\Models\Post::with('comments')->find($id));
 });
 
@@ -23,7 +23,7 @@ Route::get("categories", function () {
     return response()->json(App\Models\Category::all());
 });
 
-Route::get("categories/:id", function ($id = null) {
+Route::get("categories/{id}", function ($id = null) {
     return response()->json(App\Models\Category::find($id));
 });
 
