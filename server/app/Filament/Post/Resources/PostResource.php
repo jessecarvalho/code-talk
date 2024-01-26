@@ -3,8 +3,9 @@
 namespace App\Filament\Post\Resources;
 
 use App\Filament\Post\Resources\PostResource\Pages;
-use App\Filament\Post\Resources\Filament;
+use App\Models\Category;
 use App\Models\Post;
+use Filament\Facades\Filament as FilamentFacade;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -38,10 +39,10 @@ class PostResource extends Resource
                 ->default(
                     auth()->id()
                 ),
-            Select::make('categories')->options([
-                'cats' => 'Cats',
-                'food' => 'Cats Food',
-            ])->multiple(),
+            Select::make('categories')->options(
+                // get categories
+                Category::all()->pluck('name', 'id')
+            )->multiple(),
             TextInput::make('title')->label('Title')->rules(['required', 'string', 'max:255']),
             TextInput::make('slug')->label('Slug')->rules(['required', 'string', 'max:255']),
             TextInput::make('tags')->label('Tags')->rules(['required', 'string', 'max:255']),
