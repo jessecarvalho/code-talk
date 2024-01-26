@@ -15,7 +15,7 @@ Route::get('/posts/:quantity', function ($quantity = null) {
     return response()->json(App\Models\Post::take($quantity)->get());
 });
 
-Route::get('/posts/:id', function ($id = null) {
+Route::get('/post/:id', function ($id = null) {
     return response()->json(App\Models\Post::with('comments')->find($id));
 });
 
