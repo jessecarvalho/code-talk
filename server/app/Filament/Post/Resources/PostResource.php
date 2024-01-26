@@ -43,6 +43,7 @@ class PostResource extends Resource
                 'food' => 'Cats Food',
             ])->multiple(),
             TextInput::make('title')->label('Title')->rules(['required', 'string', 'max:255']),
+            TextInput::make('slug')->label('Slug')->rules(['required', 'string', 'max:255']),
             TextInput::make('tags')->label('Tags')->rules(['required', 'string', 'max:255']),
             DateTimePicker::make('created_at')->native(false)->displayFormat('d/m/Y H:i:s'),
             FileUpload::make('banner')->label('Banner')->image()->imageEditor()->directory('/img/panel')->downloadable()->previewable(true),
