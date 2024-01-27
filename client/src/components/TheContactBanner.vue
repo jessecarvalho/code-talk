@@ -1,7 +1,7 @@
 <template>
     <section class="banner" id="contact-banner">
       <div class="content">
-        <img src="/src/assets/imgs/coffee.gif">
+        <img src="/src/assets/imgs/coffee.gif" alt="Coffee Gif">
         <h2>So let's have a virtual coffee</h2>
       </div>
     </section>
