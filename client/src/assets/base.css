@@ -161,15 +161,15 @@ section#posts .posts-grid .post-col{
 
 section#posts .posts-grid .post-col, div#post-grid .related .post-col{
   cursor: pointer;
-  -webkit-box-shadow: 0px 0px 18px 7px rgba(0,0,0,0.15);
-  -moz-box-shadow: 0px 0px 18px 7px rgba(0,0,0,0.15);
-  box-shadow: 0px 0px 18px 7px rgba(0,0,0,0.15);
+  -webkit-box-shadow: 0 0 18px 7px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0 0 18px 7px rgba(0,0,0,0.15);
+  box-shadow: 0 0 18px 7px rgba(0,0,0,0.15);
 }
 
 section#posts .posts-grid .post-col:hover, div#post-grid .related .post-col:hover{
-  -webkit-box-shadow: 0px 0px 18px 10px rgba(0,0,0,0.15);
-  -moz-box-shadow: 0px 0px 18px 10px rgba(0,0,0,0.15);
-  box-shadow: 0px 0px 18px 10px rgba(0,0,0,0.15);
+  -webkit-box-shadow: 0 0 18px 10px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0 0 18px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 0 18px 10px rgba(0,0,0,0.15);
 }
 
 section#posts .posts-grid .post-col .post-description, div#post-grid .related .post-col .post-description{
@@ -273,7 +273,7 @@ div#post-grid {
 }
 
 div#post-grid div#post {
-  padding: 0px 40px;
+  padding: 0 40px;
 }
 
 div#post-grid div#post h2{
@@ -308,7 +308,6 @@ section#contact-banner {
   height: 100vh;}
 
 section#contact-banner .content {
-  display: flex;
   flex-direction: column;
   display: flex;
   align-items: center;
@@ -377,7 +376,7 @@ section#about .banner {
 
 section#about div.about-grid.right {
   display: grid;
-  column-gap: 0px;
+  column-gap: 0;
   grid-template-columns: 50% 50%;
 }
 
@@ -385,7 +384,7 @@ section#about div.about-grid.left {
   display: grid;
   align-items: center;
   align-content: center;
-  column-gap: 0px;
+  column-gap: 0;
   grid-template-columns: 50% 50%;
 }
 
