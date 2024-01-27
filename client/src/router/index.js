@@ -18,12 +18,12 @@ const router = createRouter({
       component: PostView
     },
     {
-      path: '/sobre',
+      path: '/about',
       name: 'about',
       component: AboutView
     },
     {
-      path: '/contato',
+      path: '/contact',
       name: 'contact',
       component: ContactView
     },
