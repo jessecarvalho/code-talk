@@ -5,13 +5,10 @@ namespace App\Filament\Post\Resources;
 use App\Filament\Post\Resources\PostResource\Pages;
 use App\Models\Category;
 use App\Models\Post;
-use Filament\Facades\Filament as FilamentFacade;
-use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
@@ -40,14 +37,13 @@ class PostResource extends Resource
                     auth()->id()
                 ),
             Select::make('categories')->options(
-                // get categories
                 Category::all()->pluck('name', 'id')
             )->multiple(),
             TextInput::make('title')->label('Title')->rules(['required', 'string', 'max:255']),
             TextInput::make('slug')->label('Slug')->rules(['required', 'string', 'max:255']),
             TextInput::make('tags')->label('Tags')->rules(['required', 'string', 'max:255']),
             DateTimePicker::make('created_at')->native(false)->displayFormat('d/m/Y H:i:s'),
-            FileUpload::make('banner')->label('Banner')->image()->imageEditor()->directory('/img/panel')->downloadable()->previewable(true),
+            FileUpload::make('banner')->label('Banner')->image()->imageEditor()->directory('/posts/img')->downloadable()->previewable(true)->visibility('public'),
             Textarea::make('resume')->label('Resume')->rules(['required', 'string', 'max:500']),
             Builder::make('content')
                 ->blocks([
