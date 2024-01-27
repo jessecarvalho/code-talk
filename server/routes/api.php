@@ -15,8 +15,8 @@ Route::get('/posts/{quantity}', function ($quantity = null) {
     return response()->json(App\Models\Post::take($quantity)->get());
 });
 
-Route::get('/post/{id}', function ($id = null) {
-    return response()->json(App\Models\Post::with('comments')->find($id));
+Route::get('/post/{id}', function ($slug = null) {
+    return response()->json(App\Models\Post::where("slug", $slug)->first());
 });
 
 Route::get("categories", function () {
