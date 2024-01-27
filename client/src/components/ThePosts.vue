@@ -5,8 +5,8 @@
         </div>
         <div class="posts-grid">
             <div class="post-col" v-for="post in posts" :key="post.id">
-              <a href="">
-                <img src="../assets/imgs/posts/01.jpg" alt="Imagem de post 1">
+              <a :href="'/post/' + post.slug">
+                <img :src="'http://localhost:8000/storage/' + post.banner " alt="Imagem de post 1">
                 <div class="post-description">
                   <h3>{{ post.title }}</h3>
                   <p>{{ post.resume }}</p>
@@ -30,12 +30,10 @@
 
 </template>
 
-
 <script>
-  import FormatDate from '../helpers/FormatDate'
-  import formatDate from '../helpers/FormatDate'
-  export default {
-      name: 'ThePosts',
+    import formatDate from '../helpers/FormatDate'
+    export default {
+    name: 'ThePosts',
     methods: { formatDate },
       props: {
           posts: {
