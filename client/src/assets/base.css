@@ -117,6 +117,24 @@ section#banner #banner-text h1 {
 }
 
 /*
+***   POST BANNER
+ */
+
+#post-banner {
+  height: 60vh;
+  width: 100%;
+  background-position: bottom;
+  background-size: cover;
+  display: flex;
+  background-attachment: fixed;
+}
+#post-banner #banner-text {
+  color: #fff;
+  margin: auto auto auto auto;
+  text-align: center;
+}
+
+/*
 ***   POSTS
 */
 
