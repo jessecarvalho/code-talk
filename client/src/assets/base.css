@@ -1,5 +1,5 @@
 :root {
-  --main-color : #aa96da;
+  --main-color : #4C2A85;
   --main-darker-color : #b16dc4;
 }
 
@@ -297,13 +297,32 @@ div#post-grid div#post #excerpt hr {
 */
 
 section#contact-banner {
-  background-image:
-    linear-gradient(to bottom, rgba(170, 150, 218, 0.5), rgba(170, 150, 218, 0.5)),
-    url('./imgs/banner-2.jpg');
+  background: linear-gradient(45deg, var(--main-color), #5784c0);
   background-position: bottom;
   background-size: cover;
   display: flex;
   background-attachment: fixed;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;}
+
+section#contact-banner .content {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+section#contact-banner .content h2 {
+    color: white;
+    font-size: 15px;
+    margin: 20px 0;
+}
+
+
+section#contact-banner .content img {
+  width: 200px;
+  height: auto;
 }
 
 section#contact {
