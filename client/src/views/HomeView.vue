@@ -24,7 +24,7 @@
       };
     },
     created() {
-      this.fetchData('/posts');
+      this.fetchData('/posts/9');
     },
     methods: {
       async fetchData(url) {
