@@ -1,5 +1,6 @@
 :root {
   --main-color : #4C2A85;
+  --secondary-color : #011655;
   --main-darker-color : #b16dc4;
 }
 
@@ -297,7 +298,7 @@ div#post-grid div#post #excerpt hr {
 */
 
 section#contact-banner {
-  background: linear-gradient(45deg, var(--main-color), #5784c0);
+  background: linear-gradient(45deg, var(--main-color), var(--secondary-color));
   background-position: bottom;
   background-size: cover;
   display: flex;
@@ -364,18 +365,28 @@ section#contact button:hover {
 
 section#about {
   margin-bottom: 30px;
+  background: linear-gradient(45deg, var(--main-color), var(--secondary-color));
+  color: #ffffff;
+}
+
+section#about .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 section#about div.about-grid.right {
   display: grid;
   column-gap: 0px;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 50% 50%;
 }
 
 section#about div.about-grid.left {
   display: grid;
+  align-items: center;
+  align-content: center;
   column-gap: 0px;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 50% 50%;
 }
 
 section#about div.about-grid div.col.text{
@@ -387,18 +398,6 @@ section#about div.about-grid div.col.text div{
   text-align: center;
 }
 
-section#about div.about-grid .banner-about {
-  height: 768px;
-  display: block;
-}
-
-section#about div.about-grid #banner-about-1 {
-  background-image: url('./imgs/banner-about-1.png');
-  background-size: cover;
-  background-attachment: scroll;
-  background-position: center left;
-}
-
 section#about div.about-grid p {
   padding: 0 20px;
 }
@@ -407,17 +406,4 @@ section#about div.about-grid hr {
   width: 20%;
   margin: 20px auto;
   border-color: var(--main-darker-color);
-}
-
-section#about div.about-grid svg {
-  width: 30px;
-  display: block;
-  margin: auto;
-}
-
-section#about div.about-grid #banner-about-2 {
-  background-image: url('./imgs/banner-about-2.png');
-  background-size: cover;
-  background-attachment: scroll;
-  background-position: center right;
 }
