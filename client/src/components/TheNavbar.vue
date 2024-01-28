@@ -1,6 +1,6 @@
 <template>
     <header id="navbar">
-        <a href="#" class="logo">
+        <a href="/" class="logo">
             <img src="../assets/imgs/logo.png" alt="Logo da DevTalk">
         </a>
         <ul class="menu">
