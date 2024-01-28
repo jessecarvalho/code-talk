@@ -31,7 +31,6 @@ export default {
   methods: {
     async fetchData(url) {
       this.post = await ApiService.fetchData(url);
-      console.log("carregou")
     }
   }
 };
