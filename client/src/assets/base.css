@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
   --main-color : #4C2A85;
   --secondary-color : #011655;
   --main-darker-color : #b16dc4;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body, html {
   overflow-x: hidden;
@@ -32,12 +32,12 @@ h1, h2, h3 {
 }
 
 p {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 200;
+  font-family: sans-serif;
+  font-weight: 500;
 }
 
 li {
-  font-family: 'Lato', sans-serif;
+  font-family:  sans-serif;
   font-weight: 300;
 }
 
@@ -204,12 +204,12 @@ section#posts .posts-grid .post-col .post-description .excerpt p, div#post-grid 
   font-size: 13px;
 }
 
-section#posts .btn.btn-purple {
+.btn.btn-purple {
   background-color: var(--main-color);
   color: white;
   padding: 15px 35px;
   border: none;
-  margin: 20px auto;
+  margin: 0 auto 20px;
   cursor: pointer;
 }
 
@@ -405,4 +405,36 @@ section#about div.about-grid hr {
   width: 20%;
   margin: 20px auto;
   border-color: var(--main-darker-color);
+}
+
+/*
+*** THE POSTS PAGE
+*/
+
+section#posts-banner {
+  background: linear-gradient(45deg, var(--main-color), var(--secondary-color));
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+section#posts-banner .content {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+section#posts-banner .content h2 {
+  color: white;
+  font-size: 25px;
+  margin: 20px 0;
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+section#posts-banner .content img {
+  width: 200px;
+  height: auto;
 }
