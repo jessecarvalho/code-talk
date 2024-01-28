@@ -3,6 +3,7 @@
     <the-navbar />
     <the-banner />
     <the-posts :posts="posts" />
+    <the-button-see-all-posts />
     <the-footer />
   </main>
 </template>
@@ -12,6 +13,7 @@
   import ThePosts from '../components/ThePosts.vue'
   import TheFooter from '../components/TheFooter.vue'
   import TheNavbar from '../components/TheNavbar.vue'
+  import TheButtonSeeAllPosts from '../components/TheButtonSeeAllPosts.vue'
 </script>
 
 <script>
